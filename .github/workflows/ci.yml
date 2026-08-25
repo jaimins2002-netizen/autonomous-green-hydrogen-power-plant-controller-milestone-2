@@ -32,7 +32,10 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           shopt -s nullglob
-          requirements=(requirements.txt resources/*/requirements.txt)
+          requirements=(resources/*/requirements.txt)
+          if [[ -f requirements.txt ]]; then
+            requirements=(requirements.txt "${requirements[@]}")
+          fi
           if ((${#requirements[@]})); then
             for file in "${requirements[@]}"; do
               echo "Installing $file"

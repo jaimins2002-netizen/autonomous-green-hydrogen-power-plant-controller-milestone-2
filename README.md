@@ -54,3 +54,19 @@ This repository contains an educational simulation. It is **not** a certified pr
 ## License
 
 No license has been specified for this milestone.
+
+## Final SCADA-Style Interface
+
+The supplied notebook’s final implementation cell renders the SCADA-style fuzzy-electrolyzer interface. It includes live plant controls, hydrogen production output, membership weights, the 11-rule firing matrix, centroid calculation, daily yield estimate, fuzzy membership-function visualization, and a multi-trace telemetry monitor.
+
+Launch the interface from the repository with:
+
+```bash
+cd autonomous-green-hydrogen-power-plant-controller-milestone-2
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+jupyter notebook ipynb/Milestone_2_Chemical_Controller.ipynb
+```
+
+Open the notebook, select **Run → Run All Cells**, and scroll to the final cell. The final cell displays the SCADA interface in the notebook. JupyterLab can be used instead with `jupyter lab ipynb/Milestone_2_Chemical_Controller.ipynb`.

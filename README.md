@@ -44,6 +44,10 @@ This repository contains an educational simulation. It is **not** a certified pr
 
 Krupa Ashishkumar Rajput; Jaimin Sanghani; Harsh Shingala; Makwana Shlock.
 
+## Project Website
+
+Visit the project landing page: [jaimins2002-netizen.github.io](https://jaimins2002-netizen.github.io/).
+
 ## License
 
 No license has been specified for this milestone.

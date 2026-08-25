@@ -24,6 +24,10 @@ This Milestone 2 repository intentionally contains the notebook implementation o
 
 Older notebook versions and generated Python exports have been removed so this repository has one clear Milestone 2 implementation source.
 
+## Executed Phase Output
+
+A fresh executed copy is stored at `ipynb/executed/Phase_3_Core_Controller/Milestone_2_Chemical_Controller_executed.ipynb`. It contains the completed controller demonstrations and final SCADA-style interface output.
+
 ## Installation and Usage
 
 Create a Python environment, install the dependencies, and open the notebook:

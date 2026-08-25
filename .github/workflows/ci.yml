@@ -25,7 +25,6 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
-          cache: pip
 
       - name: Install dependencies
         shell: bash
@@ -62,9 +61,9 @@ jobs:
         run: |
           python - <<'PY'
           import ast
-          import json
           from pathlib import Path
           import nbformat
+          from nbformat.validator import NotebookValidationError
 
           notebooks = sorted(Path('.').rglob('*.ipynb'))
           notebooks = [p for p in notebooks if '.git' not in p.parts and '.ipynb_checkpoints' not in p.parts]
@@ -73,12 +72,20 @@ jobs:
           for path in notebooks:
               with path.open(encoding='utf-8') as handle:
                   notebook = nbformat.read(handle, as_version=4)
+              try:
+                  nbformat.validate(notebook)
+              except NotebookValidationError as error:
+                  raise SystemExit(f'Notebook format validation failed in {path}: {error}')
               for index, cell in enumerate(notebook.cells):
                   if cell.cell_type == 'code':
+                      # Ignore standard Jupyter shell/magic lines while compiling Python code.
+                      source = '\\n'.join(line for line in cell.source.splitlines() if not line.lstrip().startswith(('!', '%')))
+                      if not source.strip():
+                          continue
                       try:
-                          ast.parse(cell.source, filename=f'{path}:cell-{index + 1}')
+                          ast.parse(source, filename=f'{path}:cell-{index + 1}')
                       except SyntaxError as error:
-                          raise SystemExit(f'Notebook code validation failed in {path}, cell {index + 1}: {error}')
+                          raise SystemExit(f'Notebook Python validation failed in {path}, cell {index + 1}: {error}')
               print(f'Validated {path}')
           PY
 

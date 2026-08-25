@@ -16,11 +16,11 @@ The controller includes triangular membership functions, Mamdani inference rules
 
 ## Contents
 
-- `Autonomous_Green_Hydrogen_Plant_Controller_Fuzzy.ipynb` — primary implementation notebook.
-- `Autonomous_Green_Hydrogen_Plant_Controller_Fuzzy.py` — Python export of the primary notebook.
-- `Autonomous_Green_Hydrogen_Plant_Controller_Fuzzy_validated.ipynb` and `.py` — validated implementation exports.
-- `Phase_3_Core_Controller.ipynb` and `.py` — core controller phase notebook and Python export.
-- `Phase_3_Core_Controller_executed.ipynb` and `.py` — executed notebook and Python export.
+- `ipynb/Autonomous_Green_Hydrogen_Plant_Controller_Fuzzy.ipynb` — primary implementation notebook.
+- `python/Autonomous_Green_Hydrogen_Plant_Controller_Fuzzy.py` — Python export of the primary notebook.
+- `ipynb/Autonomous_Green_Hydrogen_Plant_Controller_Fuzzy_validated.ipynb` and `python/Autonomous_Green_Hydrogen_Plant_Controller_Fuzzy_validated.py` — validated implementation exports.
+- `ipynb/Phase_3_Core_Controller.ipynb` and `python/Phase_3_Core_Controller.py` — core controller phase notebook and Python export.
+- `ipynb/Phase_3_Core_Controller_executed.ipynb` and `python/Phase_3_Core_Controller_executed.py` — executed notebook and Python export.
 - `requirements.txt` — Python dependencies.
 
 ## Installation and Usage
@@ -34,7 +34,7 @@ pip install -r requirements.txt
 jupyter notebook
 ```
 
-The exported `.py` files can also be run directly with Python.
+The exported files in `python/` can also be run directly with Python, for example `python python/Phase_3_Core_Controller.py`.
 
 ## Safety Disclaimer
 

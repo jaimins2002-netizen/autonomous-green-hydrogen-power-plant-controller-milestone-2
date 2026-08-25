@@ -79,7 +79,7 @@ jobs:
               for index, cell in enumerate(notebook.cells):
                   if cell.cell_type == 'code':
                       # Ignore standard Jupyter shell/magic lines while compiling Python code.
-                      source = '\\n'.join(line for line in cell.source.splitlines() if not line.lstrip().startswith(('!', '%')))
+                      source = '\n'.join(line for line in cell.source.splitlines() if not line.lstrip().startswith(('!', '%')))
                       if not source.strip():
                           continue
                       try:

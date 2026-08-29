@@ -2,8 +2,6 @@
 
 [Autonomous Green Hydrogen Power Plant Controller](https://jaimins2002-netizen.github.io/)
 
-[Milestone 2 Project Page](https://jaimins2002-netizen.github.io/milestone2/)
-
 ## Project Website
 
 
@@ -48,13 +46,9 @@ pip install -r requirements.txt
 jupyter notebook ipynb/Milestone_2_Chemical_Controller.ipynb
 ```
 
-## Project Website
-
-Visit the project landing page at [https://jaimins2002-netizen.github.io/](https://jaimins2002-netizen.github.io/). The Milestone 2 project page is available at [https://jaimins2002-netizen.github.io/milestone2/](https://jaimins2002-netizen.github.io/milestone2/).
-
 ## Created By
 
-This project was created by **Jaimin Sanghani and team**: Krupa Ashishkumar Rajput, Jaimin Sanghani, Harsh Shingala, and Makwana Shlock.
+This project was created by **Jaimin Sanghani and  Krupa Ashishkumar Rajput,  Harsh Shingala, and Makwana Shlock.
 
 ## Thank You
 

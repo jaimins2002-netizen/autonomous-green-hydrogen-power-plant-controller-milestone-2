@@ -1,3 +1,7 @@
+## Project Website
+
+[Autonomous Green Hydrogen Power Plant Controller](https://jaimins2002-netizen.github.io/Autonomous_Green_Hydrogen_Controller_Web.ghithub.io/)
+
 # Autonomous Green Hydrogen Power Plant Controller — Milestone 2
 
 Milestone 2 contains the uploaded **chemical-controller Jupyter notebook** for the autonomous green hydrogen power plant project. The notebook implements the core Mamdani fuzzy-logic controller and demonstrates how four plant measurements are transformed into a hydrogen production command.
